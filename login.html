@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/app.css">
+
+
+    <!-- Fontawesome 5.15.4 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Latest compiled and minified CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom styles -->
+    <link rel="stylesheet" href="./css/app.css">
+
+<body>
+
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="javascript:void(0)">Workout Tracker</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mynavbar">
+
+                <!-- ms-auto = margin-left: atuo -->
+                <!-- me-auto = margin-right: atuo -->
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="./exercise_list.html">Bài tập</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./index.html">Đăng ký</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="./login.html">Đăng nhập</a>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-3" id="main-content">
+
+        <div class="row">
+
+            <div class="col bg-primary text-white">
+                <!-- w-100 = width: 100%; -->
+                <!-- <img class="w-100"
+                    src="https://media.istockphoto.com/photos/register-now-the-phrase-is-written-on-multicolored-stickers-on-a-picture-id956959482?k=20&m=956959482&s=612x612&w=0&h=sR8sBedJ09ql7yBRsVyyhgicItObki3eixxlR3zt-pU="
+                    alt=""> -->
+                Ảnh
+            </div>
+
+            <div class="col">
+                <h4> Đăng nhập </h4>
+
+                <form id="login-form">
+
+                    <div class="mb-3">
+                        <label class="form-label">Email <span class="text-danger">*</span></label>
+                        <input type="email" class="form-control" placeholder="Nhập vào email" name="email">
+                        <div class="text-danger" id="email-error"></div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Mật khẩu <span class="text-danger">*</span></label>
+                        <input type="password" class="form-control" placeholder="Nhập vào mật khẩu" name="password">
+                        <div class="text-danger" id="password-error"></div>
+                    </div>
+
+                    <button class="btn btn-primary">Đăng nhập</button>
+                </form>
+            </div>
+        </div>
+
+    </div>
+
+    <footer class="bg-dark text-white py-4 mt-3">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-1">
+                    <i class="fab fa-facebook h4"></i>
+                    &nbsp;&nbsp;&nbsp;
+                    <i class="fab fa-youtube h4"></i>
+
+                    &nbsp;&nbsp;&nbsp;
+                    <i class="fab fa-twitter-square h4"></i>
+                </div>
+
+                <div class="col">
+                    Tel: 0987654321
+                    &nbsp;&nbsp;&nbsp;
+                    Email: someone@gmail.com
+                </div>
+
+            </div>
+        </div>
+    </footer>
+
+    <script src="./js/screens/LoginScreen.js" type="module"></script>
+</body>
+
+</html>
