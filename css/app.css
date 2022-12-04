@@ -19,3 +19,24 @@
     background-repeat: no-repeat;
     background-position: center center;
 }
+
+#register-image{
+    background-image: url('https://img.freepik.com/free-vector/home-gymnastics-abstract-concept-vector-illustration-stay-active-amid-quarantine-power-training-online-exercise-program-home-workout-social-distance-fitness-livestream-abstract-metaphor_335657-1713.jpg?w=2000');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    min-height: 300px;
+}
+
+#login-image {
+    background-image: url('https://img.freepik.com/free-vector/fitness-people-illustration_1284-52002.jpg?w=2000');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    min-height: 300px;
+}
+
+#login-content {
+    display: flex;
+    align-items: center;
+}
