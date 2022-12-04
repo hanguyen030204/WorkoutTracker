@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- Fontawesome 5.15.4 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Latest compiled and minified CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom styles -->
+    <link rel="stylesheet" href="./css/app.css">
+
+<body>
+
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark mb-3">
+        <div class="container">
+            <a class="navbar-brand" href="javascript:void(0)">Workout Tracker</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mynavbar">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="./exercise_list.html">Bài tập</a>
+                    </li>
+                </ul>
+
+                <ul class="navbar-nav" id="nav-not-logged-in">
+                    <li class="nav-item">
+                        <a class="nav-link" href="./index.html">Đăng ký</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./login.html">Đăng nhập</a>
+                    </li>
+                </ul>
+
+                <ul class="navbar-nav ms-3 d-none" id="nav-logged-in">
+                    <li class="nav-item d-flex align-items-center">
+                        <img src="https://cdn-icons-png.flaticon.com/512/149/149071.png" alt="" width="35" height="35" class="rounded-circle">
+                        <div class="dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="current-user-name" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                User 1
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
+                                <li><a class="dropdown-item" href="./profile.html">Thông tin cá nhân</a></li>
+                                <li><a class="dropdown-item" href="./logout.html">Đăng xuất</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mb-3 main-content">
+
+        <form id="search-exercises-form" class="bg-white border rounded px-3 mb-3">
+            <div class="row">
+                <div class="col-lg-3 d-flex align-items-center py-2">
+                    <div class="input-group">
+                        <input type="text" name="keyword" class="form-control" placeholder="Tìm kiếm bài tập">
+                        <button class="btn btn-primary" type="submit"><i class="fas fa-search"></i></button>
+                    </div>
+                </div>
+
+                <div class="col-lg py-2 d-flex align-items-center">
+                    <div id="filter-by-recommended" class="d-none align-items-center">
+                        <input type="checkbox" id="recommended-check" class="me-2">
+                        <label for="recommended-check" style="cursor: pointer;">Phù hợp với tôi?</label>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 py-2">
+                    <div class="form-floating">
+                        <select class="form-select" id="order-by" name="orderBy">
+                            <option>Ngày tạo</option>
+                            <option>Calories</option>
+                            <option>Rating</option>
+                        </select>
+                        <label for="orderBy" class="form-label">Sắp xếp theo:</label>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 py-2">
+                    <div class="form-floating">
+                        <select class="form-select" id="order-direction" name="orderDirection">
+                            <option>Tăng dần</option>
+                            <option>Giảm dần</option>
+                        </select>
+                        <label for="orderDirection" class="form-label">Thứ tự:</label>
+                    </div>
+                </div>
+            </div>
+        </form>
+
+        <h2 class="mb-3">Danh sách bài tập</h2>
+
+        <div class="row" id="exercise-list">
+            <div class="col-lg-3 mb-3">
+                <div class="exercise-container border rounded container-fluid">
+                    <div class="row">
+                        <div class="col-12 exercise-img rounded mb-2">
+                            <span class="h3 p-2 text-success float-end">
+                                <i class="fas fa-check-circle"></i>
+                            </span>
+                        </div>
+                        <div class="col-12 exercise-name mb-2 h3">Push-up</div>
+                        <div class="col-12 exercise-muscle mb-2">
+                            <span class="badge bg-info">Chest</span>
+                            <span class="badge bg-info">Arm</span>
+                        </div>
+                        <div class="col-6 exercise-calories">300 calories</div>
+                        <div class="col-6 exercise-rating text-warning text-end">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg">
+                    <div class="d-flex mb-3">
+                        <div class="rounded-circle bg-secondary me-2 d-flex justify-content-center align-items-center" style="width: 30px; height: 30px;"><i class="fas fa-envelope"></i></div>
+                        <div><a href="#" class="fw-bold">someone@gmail.com</a></div>
+                    </div>
+
+                    <div class="d-flex mb-3">
+                        <div class="rounded-circle bg-secondary me-2 d-flex justify-content-center align-items-center" style="width: 30px; height: 30px;"><i class="fas fa-phone"></i></div>
+                        <div><b>+84 82 1111 111</b></div>
+                    </div>
+
+                    <div class="d-flex">
+                        <div class="rounded-circle bg-secondary me-2 d-flex justify-content-center align-items-center" style="width: 30px; height: 30px;"><i class="fas fa-map"></i></div>
+                        <div><b>Ha Noi, Vietnam</b></div>
+                    </div>
+
+                </div>
+
+                <div class="col-lg">
+                    <div class="fw-bold mb-3">Giới thiệu</div>
+                    <div class="mb-3 text-secondary">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    </div>
+
+                    <div class="fw-bold mb-3">Subscribe us</div>
+                    <button class="btn btn-secondary me-3"><i class="fab fa-facebook"></i></button>
+                    <button class="btn btn-secondary me-3"><i class="fab fa-youtube"></i></button>
+                    <button class="btn btn-secondary me-3"><i class="fab fa-twitter-square"></i></button>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+
+    <script src="./js/screens/ExerciseListScreen.js" type="module"></script>
+</body>
+
+</html>

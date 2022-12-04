@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- Fontawesome 5.15.4 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Latest compiled and minified CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom styles -->
+    <link rel="stylesheet" href="./css/app.css">
+
+<body>
+
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark mb-3">
+        <div class="container">
+            <a class="navbar-brand" href="javascript:void(0)">Workout Tracker</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mynavbar">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="./exercise_list.html">Bài tập</a>
+                    </li>
+                </ul>
+
+                <ul class="navbar-nav" id="nav-not-logged-in">
+                    <li class="nav-item">
+                        <a class="nav-link" href="./index.html">Đăng ký</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./login.html">Đăng nhập</a>
+                    </li>
+                </ul>
+
+                <ul class="navbar-nav ms-3 d-none" id="nav-logged-in">
+                    <li class="nav-item d-flex align-items-center">
+                        <img src="https://cdn-icons-png.flaticon.com/512/149/149071.png" alt="" width="35" height="35" class="rounded-circle">
+                        <div class="dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="current-user-name" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                User 1
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
+                                <li><a class="dropdown-item" href="./profile.html">Thông tin cá nhân</a></li>
+                                <li><a class="dropdown-item" href="./logout.html">Đăng xuất</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mb-3 main-content" id="exercise-detail">
+        <h2 id="exercise-name" class="mb-3">Push-up</h2>
+
+        <div class="row mb-3">
+            <div class="col-lg-9">
+                <iframe id="exercise-video" width="100%" height="600" src="https://www.youtube.com/embed/rlcBZ-YsG8A" title="Chest workout - best home routine to kill pec muscle calisthenics and bodyweight" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+
+            <div class="col-lg-3 bg-white border rounded p-3">
+                <div class="h4">Thông tin</div>
+                <p>- Calories: <span id="exercise-calories">300</span></p>
+                <p>- Mức độ: <span id="exercise-difficulty">Dễ</span></p>
+
+                <div class="h4">Mục tiêu bài tập</div>
+                <div id="exercise-purposes" class="mb-3">
+                    <p>- Rèn luyện sức khỏe</p>
+                    <p>- Giảm cân</p>
+                </div>
+
+                <div class="h4">Dụng cụ</div>
+                <div id="exercise-equipments" class="mb-3">Không</div>
+
+                <div class="h4">Tác động</div>
+                <div id="exercise-muscle" class="mb-3">
+                    <span class="badge bg-info">Chest</span>
+                    <span class="badge bg-info">Arm</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="mb-3 text-secondary">Bài tập này dành cho <span id="exercise-genders">Nam</span> ở độ tuổi <span id="exercise-ages">20-30</span>.</div>
+
+        <h3 class="mb-3">Mô tả</h3>
+        <div class="mb-3" id="exercise-description">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore magna aliqua.
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
+            laborum
+        </div>
+
+        <hr>
+
+        <h3 class="mb-3">Hướng dẫn</h3>
+        <div class="mb-3" id="exercise-instruction">
+            <p>1. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua.</p>
+            <p>2. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                consequat.</p>
+            <p>3. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+            </p>
+            <p>4. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
+                laborum.</p>
+        </div>
+
+        <hr>
+
+        <h3 class="mb-3">Đánh giá & bình luận</h3>
+
+        <div class="score-info mb-3 border rounded container-fluid py-2">
+            <div class="row">
+                <div class="col-lg-3">
+                    <div style="font-size: 50px;" class="mb-1" id="avg-score">4.0</div>
+
+                    <div id="avg-star" class="text-warning mb-1">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+
+                    <span class="text-secondary">
+                        Đánh giá bởi <b id="user-number">100</b> người dùng
+                    </span>
+                </div>
+
+                <div class="col-lg" id="star-progress">
+
+                    <div class="d-flex align-items-center mb-2">
+                        <b class="me-3"><i class="fas fa-star"></i> 5</b>
+                        <div class="progress w-50">
+                            <div class="progress-bar bg-success" role="progressbar" id="five-star-number"></div>
+                        </div>
+                    </div>
+
+                    <div class="d-flex align-items-center mb-2">
+                        <b class="me-3"><i class="fas fa-star"></i> 4</b>
+                        <div class="progress w-50">
+                            <div class="progress-bar bg-success" role="progressbar" id="four-star-number"></div>
+                        </div>
+                    </div>
+
+                    <div class="d-flex align-items-center mb-2">
+                        <b class="me-3"><i class="fas fa-star"></i> 3</b>
+                        <div class="progress w-50">
+                            <div class="progress-bar bg-success" role="progressbar" id="three-star-number"></div>
+                        </div>
+                    </div>
+
+                    <div class="d-flex align-items-center mb-2">
+                        <b class="me-3"><i class="fas fa-star"></i> 2</b>
+                        <div class="progress w-50">
+                            <div class="progress-bar bg-success" role="progressbar" id="two-star-number"></div>
+                        </div>
+                    </div>
+
+                    <div class="d-flex align-items-center mb-2">
+                        <b class="me-3"><i class="fas fa-star"></i> 1</b>
+                        <div class="progress w-50">
+                            <div class="progress-bar bg-success" role="progressbar" id="one-star-number"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <form id="comment-form" class="mb-3 border rounded p-3">
+            <div class="mb-3">
+                <label for="">Điểm số</label>
+                <div id="rate-select"></div>
+                <div class="text-danger" id="score-error"></div>
+            </div>
+            <div class="form-floating mb-3">
+                <textarea class="form-control" id="comment" name="comment" placeholder="Nhập bình luận"></textarea>
+                <label for="comment">Bình luận <span class="text-danger">*</span></label>
+            </div>
+            <div class="text-danger" id="comment-error"></div>
+            <button class="btn btn-primary">Đánh giá</button>
+        </form>
+
+        <div id="comment-alert" class="mb-3 alert alert-success d-none">
+            <div class="d-flex justify-content-between align-items-center">
+                <span>Bạn đã đánh giá bài tập này!</span>
+                <button id="recomment-exercise" class="btn btn-primary">Thay đổi</button>
+            </div>
+        </div>
+
+        <div id="comment-list" class="mb-3"></div>
+    </div>
+
+    <div class="container-fluid mb-3 text-center d-none main-content" id="not-found">
+        <div class="h3 mb-4">Oops!</div>
+        <div class="h4">
+            Trang này không tồn tại hoặc đã bị xoá
+        </div>
+        <div class="h1">404</div>
+    </div>
+
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg">
+                    <div class="d-flex mb-3">
+                        <div class="rounded-circle bg-secondary me-2 d-flex justify-content-center align-items-center" style="width: 30px; height: 30px;"><i class="fas fa-envelope"></i></div>
+                        <div><a href="#" class="fw-bold">someone@gmail.com</a></div>
+                    </div>
+
+                    <div class="d-flex mb-3">
+                        <div class="rounded-circle bg-secondary me-2 d-flex justify-content-center align-items-center" style="width: 30px; height: 30px;"><i class="fas fa-phone"></i></div>
+                        <div><b>+84 82 1111 111</b></div>
+                    </div>
+
+                    <div class="d-flex">
+                        <div class="rounded-circle bg-secondary me-2 d-flex justify-content-center align-items-center" style="width: 30px; height: 30px;"><i class="fas fa-map"></i></div>
+                        <div><b>Ha Noi, Vietnam</b></div>
+                    </div>
+
+                </div>
+
+                <div class="col-lg">
+                    <div class="fw-bold mb-3">Giới thiệu</div>
+                    <div class="mb-3 text-secondary">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    </div>
+
+                    <div class="fw-bold mb-3">Subscribe us</div>
+                    <button class="btn btn-secondary me-3"><i class="fab fa-facebook"></i></button>
+                    <button class="btn btn-secondary me-3"><i class="fab fa-youtube"></i></button>
+                    <button class="btn btn-secondary me-3"><i class="fab fa-twitter-square"></i></button>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+
+    <script src="./js/screens/ExerciseDetailScreen.js" type="module"></script>
+</body>
+
+</html>
